@@ -54,6 +54,21 @@ body {
 .right-section img.active {
     opacity: 1;
 }
+
+/* ✅ Encadré menu & frites */
+.info-box {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    max-width: 280px;
+}
 </style>
 </head>
 <body>
@@ -61,30 +76,4 @@ body {
 <div class="container">
     <!-- Section gauche - image fixe -->
     <div class="left-section">
-        <img src="1.png" alt="Image principale">
-    </div>
-
-    <!-- Section droite - images qui tournent -->
-    <div class="right-section">
-        <img src="p1.png" class="active" alt="Frame 1">
-                <img src="p2.png" class="active" alt="Frame 1">
-
-        
-        <!-- ajoute autant de frames que tu veux -->
-    </div>
-</div>
-
-<script>
-// Animation du slider à droite
-let frames = document.querySelectorAll(".right-section img");
-let indexFrame = 0;
-
-setInterval(() => {
-    frames[indexFrame].classList.remove("active");
-    indexFrame = (indexFrame + 1) % frames.length;
-    frames[indexFrame].classList.add("active");
-}, 4000); // change toutes les 0.5 secondes
-</script>
-
-</body>
-</html>
+        <img src="1.png"
